@@ -1,11 +1,6 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var propTypes = require('prop-types')
+var React = require("react");
+var ReactDOM = require("react-dom");
+require("./index.css");
+var App = require("./components/App");
 
-require('./index.css');
-var App = require('./components/App');
-
-ReactDOM.render(
-	<App />,
-	document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById("app"));
