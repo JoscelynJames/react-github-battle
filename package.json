@@ -5,21 +5,21 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build": "NODE_ENV='production' webpack -p",
+    "deploy": "npm run build and firebase deploy",
+    "firebase-init": "firebase login && firebase init"
   },
   "babel": {
-    "presets": [
-      "env",
-      "react"
-    ]
+    "presets": ["env", "react"]
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
+    "firebase-tools": "^3.13.1",
     "prop-types": "^15.6.0",
+    "query-string": "^5.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.2.2"
